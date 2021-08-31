@@ -1,0 +1,7 @@
+{
+    "name": "fyrevmweb",
+    "author": "David Cornelson",
+    "version": "1.0.0",
+    "main": "./build/FyreVMWeb.js",
+    "types": "./build/FyreVMWeb.d.js"
+}
