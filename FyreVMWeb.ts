@@ -15,8 +15,7 @@ var fyrevm = {};
 function isEnterKey(e) {
     return e.code == "Enter";
 }
-
-module FyreVMWeb {
+export module FyreVMWeb {
 
     export enum States {
         INIT,

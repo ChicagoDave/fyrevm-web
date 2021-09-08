@@ -639,53 +639,53 @@ declare module FyreVM {
         saveGame(): Quetzal;
     }
 }
-declare var fyrevm: {};
-declare function isEnterKey(e: any): boolean;
-declare module FyreVMWeb {
-    enum States {
-        INIT = 0,
-        RESTORE_SESSION = 1,
-        NEW_SESSION = 2,
-        WAITING_FOR_KEY = 3,
-        WAITING_FOR_LINE = 4,
-        COMMAND = 5,
-        SAVE = 6,
-        UPDATE_SESSION = 7
-    }
-    enum StoryStatus {
-        CONTINUE = 0,
-        ENDED = 1
-    }
-    class Manager {
-        ChannelData: FyreVM.ChannelData;
-        State: States;
-        Status: StoryStatus;
-        OutputReady: () => void;
-        InputElement: HTMLInputElement;
-        private wrapper;
-        private contentDefinition;
-        private ifid;
-        private SetState;
-        LoadStory(url: string): void;
-        private GetSaveData;
-        private Init;
-        private NewSession;
-        private RestoreSession;
-        ProcessResult(result: FyreVM.EngineWrapperState): void;
-        private SendCommand;
-        ProcessCommand(result: FyreVM.EngineWrapperState): void;
-        private NewSaveGame;
-        private SaveGame;
-        private LoadSavedGame;
-        private UpdateSavedGame;
-        private LoadSession;
-        private SaveSession;
-        private UpdateCommand;
-        private UpdateStory;
-        private UpdateTurnData;
-        private SaveKey;
-        private GetIFID;
-        private GetChannelName;
-        private UpdateContent;
+declare module "FyreVMWeb" {
+    export module FyreVMWeb {
+        enum States {
+            INIT = 0,
+            RESTORE_SESSION = 1,
+            NEW_SESSION = 2,
+            WAITING_FOR_KEY = 3,
+            WAITING_FOR_LINE = 4,
+            COMMAND = 5,
+            SAVE = 6,
+            UPDATE_SESSION = 7
+        }
+        enum StoryStatus {
+            CONTINUE = 0,
+            ENDED = 1
+        }
+        class Manager {
+            ChannelData: FyreVM.ChannelData;
+            State: States;
+            Status: StoryStatus;
+            OutputReady: () => void;
+            InputElement: HTMLInputElement;
+            private wrapper;
+            private contentDefinition;
+            private ifid;
+            private SetState;
+            LoadStory(url: string): void;
+            private GetSaveData;
+            private Init;
+            private NewSession;
+            private RestoreSession;
+            ProcessResult(result: FyreVM.EngineWrapperState): void;
+            private SendCommand;
+            ProcessCommand(result: FyreVM.EngineWrapperState): void;
+            private NewSaveGame;
+            private SaveGame;
+            private LoadSavedGame;
+            private UpdateSavedGame;
+            private LoadSession;
+            private SaveSession;
+            private UpdateCommand;
+            private UpdateStory;
+            private UpdateTurnData;
+            private SaveKey;
+            private GetIFID;
+            private GetChannelName;
+            private UpdateContent;
+        }
     }
 }
